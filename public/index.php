@@ -1,19 +1,19 @@
 <?php
 $categorias = [
-  "camisetas",
-  "calças",
-  "tenis",
-  "categoria4",
-  "categoria5",
-  "categoria6",
+  "bolsas",
+  "calcados",
+  "calcas",
+  "camiseta",
+  "casacos",
+  "oculos",
 ];
 $produtos = [
-  'Nike Airmax',
-  'Camiseta do vasco',
-  'calça jogger',
-  'Cueca do kalvin klein',
-  'Boné da lacosta',
-  'meia padrão',
+  'bolsa',
+  'calca',
+  'camiseta',
+  'jaqueta-jeans',
+  'oculos',
+  'tenis',
 ];
 
 ?>
@@ -56,7 +56,7 @@ $produtos = [
             <form class="d-flex" role="search">
                 <input class="form-control me-2 rounded-0
 
-" type="search" placeholder="Digite um produto" aria-label="Search">
+" type="search" placeholder="Digite um produto" aria-label="Pesquisar">
                 <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button>
             </form>
         </div>
@@ -101,21 +101,23 @@ $produtos = [
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">anterior</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden">proximo</span>
     </button>
 </div>
 
 <!-- GRID CONTAINER NO BOOTSTRAP-->
-<h2 class="text-center mt-3 mb-3">Busque por categoria</h2>
+<h2 class="text-center mt-3 mb-3 my-xl-5">Busque por categoria</h2>
 <div class="container row mx-auto g-4">
 <?php foreach ($categorias as $categoria): ?>
-    <div class="col-6 col-md-4 col-xxl-2">
-        <div class="card bg-black ">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <div class="col-6 col-md-4 col-xxl-2 ">
+        <div class="card bg-black rounded-0 border-0">
+            <img src="./img/Mobile/categorias/categoria-<?=$categoria;?>.png" alt="" class="d-md-none d-xl-none d-block"">
+            <img src="./img/Tablet/categorias/categoria-<?=$categoria;?>.png" alt="" class="d-none d-md-block d-xl-none">
+            <img src="./img/Desktop/categorias/categoria-<?=$categoria;?>.png" alt="" class="d-none d-md-none d-xl-block">
             <div class="card-header ">
                 <p class="text-center text-light "><?= $categoria ?></p>
             </div>
@@ -125,12 +127,14 @@ $produtos = [
     </div>
 
 <!-- GRID CONTAINER NO BOOTSTRAP-->
-<h2 class="text-center mt-3 mb-3">Produtos que estão bombando</h2>
+<h2 class="text-center mt-3 mb-3 my-xl-5">Produtos que estão bombando</h2>
 <div class="container row mx-auto g-4">
     <?php foreach($produtos as $produto): ?>
     <div class="col-12 col-md-6 col col-xl-4">
         <div class="card ">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+            <img src="./img/Mobile/produtos/<?=$produto?>.png" alt="" class="d-md-none d-xl-none d-block">
+            <img src="./img/Tablet/produtos/<?=$produto?>.png" alt="" class="d-none d-md-block d-xl-none">
+            <img src="./img/Desktop/produtos/<?=$produto?>.png" alt="" class="d-none d-md-none d-xl-block">
             <div class="card-body">
                 <h5 class="card-title text-center"><?= $produto?></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -174,7 +178,7 @@ $produtos = [
 
 <!-- Estilizando formulário -->
 <div class="d-flex justify-content-center py-5">
-<form class="border border-secondary m-3 p-3 text-center" method="post">
+<form class="border border-secondary my-3 my-xl-5 p-3 text-center" method="post">
     <h5>Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra?
         Cadastre-se!</h5>
     <div class="input-group my-3">
